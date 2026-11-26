@@ -302,6 +302,16 @@
 
   const PORTFOLIO_IMG = { file: "HarvardUniversity WidenerLibrary CardCatalogs 1915.jpg", credit: "Harvard University, 1915, public domain", alt: "Card catalogues in the Widener Library, Harvard University, 1915" };
   const AUDIO_IMG = { file: "Radio studio. Smaller room. Looking into controll (sic) room LOC matpc.03327.jpg", credit: "Matson Photo Service / Library of Congress, public domain", alt: "A radio studio looking into the control room, 1930s" };
+  function photoAdjuster() {
+    const img = app.querySelector(".hero img"); if (!img) return;
+    const cur = (img.style.objectPosition.match(/(\d+)%\s*$/) || [0, 50])[1];
+    const box = el(`<div class="callout"><strong>Photo position</strong> (temporary tool, visible only at #/adjust)<br>
+      <label>Move the slider until the face is visible: <input type="range" min="0" max="100" step="1" value="${cur}" id="adjY" style="width:100%"></label>
+      <div>Value to send: <code id="adjOut">center ${cur}%</code></div></div>`);
+    app.querySelector(".hero").insertAdjacentElement("afterend", box);
+    const r = box.querySelector("#adjY"), o = box.querySelector("#adjOut");
+    r.oninput = () => { img.style.objectPosition = `center ${r.value}%`; o.textContent = `center ${r.value}%`; };
+  }
   function renderHome() {
     markActive("home");
     const homeImg = { img: { file: "Ida Rhodes at NBS 002.jpg", credit: "NIST Historic Photograph Collection, public domain", alt: "Mathematician Ida Rhodes at the National Bureau of Standards", pos: "center 3%" }, icon: "flask" };
@@ -464,7 +474,7 @@
       if (m[2]) { const t = document.getElementById(`u${n}-${m[2]}`); if (t) t.scrollIntoView({ behavior: "smooth" }); }
     } else if (h.startsWith("#/audio")) { renderAudio(); app.dataset.page = "a"; window.scrollTo(0, 0);
     } else if (h.startsWith("#/portfolio")) { renderPortfolio(); app.dataset.page = "p"; window.scrollTo(0, 0); }
-    else { renderHome(); app.dataset.page = "h"; window.scrollTo(0, 0); }
+    else { renderHome(); app.dataset.page = "h"; window.scrollTo(0, 0); if (h.startsWith("#/adjust")) photoAdjuster(); }
   }
   document.getElementById("menuBtn").onclick = () => sidebar.classList.toggle("open");
   renderSidebar();
