@@ -300,9 +300,11 @@
     wireAudio(app); refreshProgress(n);
   }
 
+  const PORTFOLIO_IMG = { file: "HarvardUniversity WidenerLibrary CardCatalogs 1915.jpg", credit: "Harvard University, 1915, public domain", alt: "Card catalogues in the Widener Library, Harvard University, 1915" };
+  const AUDIO_IMG = { file: "Radio studio. Smaller room. Looking into controll (sic) room LOC matpc.03327.jpg", credit: "Matson Photo Service / Library of Congress, public domain", alt: "A radio studio looking into the control room, 1930s" };
   function renderHome() {
     markActive("home");
-    const homeImg = { img: { file: "Scientist looking thorugh microscope.jpg", credit: "National Cancer Institute (NIH), public domain", alt: "A scientist looking through a microscope" }, icon: "flask" };
+    const homeImg = { img: { file: "Ida Rhodes at NBS 002.jpg", credit: "NIST Historic Photograph Collection, public domain", alt: "Mathematician Ida Rhodes at the National Bureau of Standards" }, icon: "flask" };
     app.innerHTML = hero(homeImg, "UAZ Graduate Programmes · B2 English for research", "Research Pathways B2 — Workbook", "Independent practice for the Student's Book, from project to publication, organised by units and with instant feedback.") +
       `<div class="callout"><strong>How does it work?</strong><ul>
         <li>Do each unit <strong>after</strong> you finish the same unit in class (about 5 hours per unit, including extensive reading and work on your own article).</li>
@@ -337,7 +339,10 @@
       <li><strong>Use AI tools honestly.</strong> Record what you used them for, check every output and never use them to invent references, data or quotations.</li>
       <li><strong>Read aloud.</strong> If you need to breathe in the middle of a sentence, the sentence is too long.</li>
       <li><strong>Keep your article alive.</strong> Work on it a little every week, not only before the deadline.</li></ul>
-      <p class="ex-note">Studies, people and texts marked as <em>written for this workbook</em> are fictional and are used for practice.</p>` + footer();
+      <p class="ex-note">Studies, people and texts marked as <em>written for this workbook</em> are fictional and are used for practice.</p>
+      <h2>Photo credits</h2>
+      <p>All photographs come from Wikimedia Commons and are in the public domain or under free licences. Click a title to see the original file and its licence.</p>
+      <table class="t"><tr><th>Page</th><th>Photograph</th><th>Author and licence</th></tr>${[["Home", homeImg.img], ["My portfolio", PORTFOLIO_IMG], ["Student's Book audio", AUDIO_IMG]].concat(UNITS.map(u => ["Unit " + u.n + " · " + u.title, u.img])).map(r => `<tr><td>${esc(r[0])}</td><td><a href="${commonsPage(r[1].file)}" target="_blank" rel="noopener">${esc(r[1].alt)}</a></td><td>${esc(r[1].credit)}</td></tr>`).join("")}</table>` + footer();
   }
 
   const BOOK_TRACKS = [
@@ -375,7 +380,7 @@
     markActive("portfolio");
     const s = store.get("portfolio", {}), art = store.get("article", {}), cf = store.get("cefr", {}), st = store.get("student", {});
     const sel = (k, v) => `<select class="gap" data-cefr="${k}">${SCALE.map((o, i) => `<option value="${i || ""}" ${String(v || "") === String(i || "") ? "selected" : ""}>${o || "—"}</option>`).join("")}</select>`;
-    app.innerHTML = hero({ img: { file: "Microscope (inverted).jpg", credit: "National Cancer Institute (NIH), public domain", alt: "A scientist observing cell cultures with an inverted microscope" }, icon: "doc" }, "Research portfolio", "My portfolio", "Track your documents, your integrated article and your B2 self-assessment, and download your results for your teacher.") +
+    app.innerHTML = hero({ img: PORTFOLIO_IMG, icon: "doc" }, "Research portfolio", "My portfolio", "Track your documents, your integrated article and your B2 self-assessment, and download your results for your teacher.") +
       `<h2>Research portfolio</h2><p>Tick each document when the final version is ready.</p>
       <div class="ex"><ul class="checklist" style="font-size:1rem">${PORTFOLIO.map((p, i) => `<li><input type="checkbox" id="pf${i}" data-pf="${i}" ${s[i] ? "checked" : ""}><label for="pf${i}"><a href="#/unit/${i + 1}">Unit ${i + 1}</a> · ${p}</label></li>`).join("")}</ul></div>
       <h2>My integrated article tracker</h2><p>Your article grows unit by unit. Tick each section when the second draft is ready.</p>
@@ -401,7 +406,7 @@
 
   function renderAudio() {
     markActive("audio");
-    app.innerHTML = hero({ img: { file: "GD09 Poster Session.jpg", credit: "David Eppstein", alt: "A poster session at an academic conference" }, icon: "mic" }, "Student's Book · 24 tracks", "Student's Book audio", "Every track in the Student's Book, unit by unit: a lecture, seminar or meeting (X.1) and a <em>Research Voices</em> monologue (X.2).") +
+    app.innerHTML = hero({ img: AUDIO_IMG, icon: "mic" }, "Student's Book · 24 tracks", "Student's Book audio", "Every track in the Student's Book, unit by unit: a lecture, seminar or meeting (X.1) and a <em>Research Voices</em> monologue (X.2).") +
       `<div class="callout">The audio files will be added soon. Each track below already has its place; until the files are available, use the recordings played in class.</div>`;
     let u = 0;
     BOOK_TRACKS.forEach(tr => {

@@ -20,7 +20,7 @@ window.UNITS.push(
 {
   n: 1, title: "Research identities", icon: "flask",
   sub: "Tense and aspect · researcher profiles · your research statement",
-  img: { file: "Researchers in laboratory.jpg", credit: "Rhoda Baer / National Cancer Institute, public domain", alt: "Researchers working in a laboratory" },
+  img: { file: "Goddard scientist Jennifer Eigenbrode (6385412459).jpg", credit: "NASA Goddard Space Flight Center, public domain", alt: "A NASA researcher in her laboratory" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Complete the sentences with the correct form of the words in the box.", note: "Each word is used once. Change the form of the verb if necessary.",
@@ -105,7 +105,7 @@ window.UNITS.push(
 {
   n: 2, title: "Mapping the field", icon: "book",
   sub: "Reporting verbs · integral and non-integral citation · from summary to synthesis",
-  img: { file: "LOC Main Reading Room Highsmith.jpg", credit: "Carol M. Highsmith / Library of Congress, public domain", alt: "The Main Reading Room of the Library of Congress" },
+  img: { file: "Library-shelves-bibliographies-Graz.jpg", credit: "Dr. Marcus Gossler, CC BY-SA 3.0", alt: "Open shelves of bibliographies in the University Library of Graz" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "choice", prompt: "Choose the correct word.",
@@ -191,7 +191,7 @@ window.UNITS.push(
 {
   n: 3, title: "Making space", icon: "question",
   sub: "CARS moves · nominalisation and contrast · writing the introduction",
-  img: { file: "Researcher looking through microscope.jpg", credit: "National Cancer Institute (NIH), public domain", alt: "A researcher looking through a microscope" },
+  img: { file: "Graz University-Library reading-room.jpg", credit: "Dr. Marcus Gossler, CC BY-SA 3.0", alt: "The main reading room of Graz University Library" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Classify the phrases as Move 1 (territory), Move 2 (niche) or Move 3 (occupying the niche).",
@@ -265,7 +265,7 @@ window.UNITS.push(
 {
   n: 4, title: "By design", icon: "ruler",
   sub: "Varied passives · purpose and reason · justifying methodological decisions",
-  img: { file: "Medical Laboratory Scientist US NIH.jpg", credit: "National Institutes of Health, free content", alt: "A laboratory scientist using micropipettes" },
+  img: { file: "Cereal trial plot, Cereals 2010 - geograph.org.uk - 1910647.jpg", credit: "Michael Trolove, CC BY-SA 2.0", alt: "Cereal trial plots at an agricultural research demonstration" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Complete the table with the noun.",
@@ -330,7 +330,7 @@ window.UNITS.push(
 {
   n: 5, title: "Thick description", icon: "voice",
   sub: "Relative clauses and the past perfect · trustworthiness · positionality",
-  img: { file: "Making and curing adobe bricks - NARA - 286037.jpg", credit: "U.S. National Archives (NARA), public domain", alt: "Making and drying adobe bricks" },
+  img: { file: "Women apply pigment to the pottery - NARA - 285575.jpg", credit: "U.S. National Archives (NARA), public domain", alt: "Women applying pigment to pottery" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Lincoln and Guba (1985) proposed four criteria of trustworthiness. Match each criterion with a strategy.",
@@ -408,7 +408,7 @@ window.UNITS.push(
 {
   n: 6, title: "Integrity matters", icon: "shield",
   sub: "Past modals · research misconduct · authorship, data and AI statements",
-  img: { file: "Microscope (1).jpg", credit: "National Cancer Institute (NIH), public domain", alt: "Two scientists at a dual-head microscope" },
+  img: { file: "AGBell Notebook.jpg", credit: "Alexander Graham Bell / Library of Congress, public domain", alt: "A page of Alexander Graham Bell's laboratory notebook, 1876" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Classify each practice as **misconduct** (fabrication, falsification or plagiarism), **questionable** or **acceptable**.",

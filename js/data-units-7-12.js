@@ -8,7 +8,7 @@ window.UNITS.push(
 {
   n: 7, title: "The story in the numbers", icon: "chart",
   sub: "Comparison and change · effect sizes and confidence intervals · the results section",
-  img: { file: "Scientist Working in a Laboratory(GN09043).jpg", credit: "State Government Photographer, History Trust of South Australia (CC0)", alt: "A scientist working in a laboratory, around 1945" },
+  img: { file: "Toxicology Research at FDA (NCTR 1470) (6009042166).jpg", credit: "U.S. Food and Drug Administration, public domain", alt: "A scientist analysing microarray results on a computer" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Complete with *confidence interval*, *effect size*, *mean*, *median*, *outlier* or *standard deviation*.",
@@ -69,7 +69,7 @@ window.UNITS.push(
 {
   n: 8, title: "Making the case", icon: "bulb",
   sub: "Concession and conditionals · Toulmin arguments · the discussion section",
-  img: { file: "Giant photovoltaic array.jpg", credit: "U.S. Air Force, public domain", alt: "A large array of solar panels" },
+  img: { file: "20181113-FPAC-LSC-0045.jpg", credit: "Lance Cheung / USDA, public domain", alt: "A community garden at a public school" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Label the parts of this argument: *claim, grounds, warrant, qualifier, rebuttal*.",
@@ -139,7 +139,7 @@ window.UNITS.push(
 {
   n: 9, title: "Under review", icon: "doc",
   sub: "Reporting comments · polite disagreement · responding to reviewers",
-  img: { file: "Scientist looking thorugh microscope.jpg", credit: "National Cancer Institute (NIH), public domain", alt: "A scientist looking through a microscope" },
+  img: { file: "2008-01-26 (Editing a paper) - 31.jpg", credit: "Nic McPhee, CC BY-SA 2.0", alt: "A draft research paper covered in editing marks" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Complete the sentences.",
@@ -205,7 +205,7 @@ window.UNITS.push(
 {
   n: 10, title: "Taking the floor", icon: "stage",
   sub: "Emphasis: clefts and inversion · signposting · conference talks",
-  img: { file: "GD09 Poster Session.jpg", credit: "David Eppstein", alt: "A poster session at an academic conference" },
+  img: { file: "Snjezana Kordic keynote presentation Hokkaido University.jpg", credit: "Mozel W., CC BY-SA 4.0", alt: "A keynote presentation at an international research symposium" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Complete the sentences.",
@@ -262,7 +262,7 @@ window.UNITS.push(
 {
   n: 11, title: "Building bridges", icon: "team",
   sub: "Future continuous and future perfect · consortium meetings · project proposals",
-  img: { file: "Solvay conference 1927.jpg", credit: "Benjamin Couprie, public domain", alt: "Scientists at the 1927 Solvay Conference" },
+  img: { file: "Staff meeting.jpg", credit: "Robert Scoble, CC BY 2.0", alt: "Colleagues working with laptops in a meeting room" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Complete the sentences.",
@@ -320,7 +320,7 @@ window.UNITS.push(
 {
   n: 12, title: "Knowledge for society", icon: "globe",
   sub: "Changing register · plain language · policy briefs",
-  img: { file: "Senegal village well.jpg", credit: "TSgt Justin D. Pyle, U.S. Air Force, public domain", alt: "A water well in a rural community" },
+  img: { file: "Dr. Heidi Cullen.jpg", credit: "NOAA, public domain", alt: "A climate scientist asks a question at a round-table" },
   sections: [
     { h: "Vocabulary", ex: [
       { num: "1", type: "gaps", prompt: "Complete the sentences.",
