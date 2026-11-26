@@ -97,7 +97,7 @@
   function hero(u, kicker, title, sub) {
     const img = u && u.img;
     const fb = `<div class="hero-fallback ${img ? "fb-hidden" : ""}" ${img ? 'style="display:none"' : ""}>${icon(u ? u.icon : "flask")}</div>`;
-    const im = img ? `<img src="${commons(img.file)}" alt="${esc(img.alt)}" loading="eager" onerror="__imgFail(this)">` : "";
+    const im = img ? `<img src="${commons(img.file)}" alt="${esc(img.alt)}" loading="eager"${img.pos ? ` style="object-position:${img.pos}"` : ""} onerror="__imgFail(this)">` : "";
     return `<section class="hero">${im}${fb}<div class="hero-text"><div class="kicker">${kicker}</div><h1>${esc(title)}</h1>${sub ? `<p>${sub}</p>` : ""}</div></section>` +
       (img ? `<div class="credit">Photo: <a href="${commonsPage(img.file)}" target="_blank" rel="noopener">${esc(img.credit)}</a> · Wikimedia Commons</div>` : "");
   }
@@ -304,7 +304,7 @@
   const AUDIO_IMG = { file: "Radio studio. Smaller room. Looking into controll (sic) room LOC matpc.03327.jpg", credit: "Matson Photo Service / Library of Congress, public domain", alt: "A radio studio looking into the control room, 1930s" };
   function renderHome() {
     markActive("home");
-    const homeImg = { img: { file: "Ida Rhodes at NBS 002.jpg", credit: "NIST Historic Photograph Collection, public domain", alt: "Mathematician Ida Rhodes at the National Bureau of Standards" }, icon: "flask" };
+    const homeImg = { img: { file: "Ida Rhodes at NBS 002.jpg", credit: "NIST Historic Photograph Collection, public domain", alt: "Mathematician Ida Rhodes at the National Bureau of Standards", pos: "center 20%" }, icon: "flask" };
     app.innerHTML = hero(homeImg, "UAZ Graduate Programmes · B2 English for research", "Research Pathways B2 — Workbook", "Independent practice for the Student's Book, from project to publication, organised by units and with instant feedback.") +
       `<div class="callout"><strong>How does it work?</strong><ul>
         <li>Do each unit <strong>after</strong> you finish the same unit in class (about 5 hours per unit, including extensive reading and work on your own article).</li>
