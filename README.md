@@ -30,7 +30,7 @@ The site will be available at `https://<user>.github.io/Research-B2/`.
 
 ## Audio
 
-The audio files are not uploaded yet. Every *Listen again* exercise and the *Student's Book audio* page already have a player; until the files exist, students see "Audio coming soon". See `audio/README.md` to add them.
+The 24 Student's Book tracks are in `audio/` (`track-1-1.mp3` … `track-12-2.mp3`). They were generated with Kokoro TTS (open-source, Apache 2.0) from the scripts in the Teacher's Guide, with a voice close to each speaker's accent. The *Listen again* exercises and the *Student's Book audio* page play them automatically. See `audio/README.md` to replace a track with a real recording.
 
 ## Notes
 

@@ -114,7 +114,7 @@
     return `<div class="audio-slot"><div class="ic">${headphones}</div>
       <div class="meta"><b>Student's Book · Track ${track}</b><small>${esc(label || "")}</small></div>
       ${player}
-      <div class="audio-missing" hidden>Audio coming soon. Until then, use the recording played in class.</div></div>`;
+      <div class="audio-missing" hidden>This track could not be loaded. Check your connection and try again.</div></div>`;
   }
   function wireAudio(root) {
     root.querySelectorAll(".audio-slot audio").forEach(a => {
@@ -311,7 +311,7 @@
         <li>In self-check exercises, click <strong>Check</strong>. If an answer is wrong, you will see <strong>why</strong>; then you can correct it or click <em>Show answer</em>.</li>
         <li>In multiple-choice exercises, the explanation appears when you choose. You can try again.</li>
         <li>In writing tasks and <em>My article</em>, write your own version first; then you can open the <strong>model answer</strong> to compare.</li>
-        <li>The <em>Listen again</em> exercises have a player for the Student's Book track. The audio files will be added soon; until then, use the recordings from class.</li>
+        <li>The <em>Listen again</em> exercises include the Student's Book track, so you can listen as many times as you need. All 24 tracks are also on the <a href="#/audio">Student's Book audio</a> page.</li>
         <li>Everything you write is saved in this browser only (nothing is sent to a server). To submit your progress, go to <a href="#/portfolio">My portfolio</a> and download your results to send them to your teacher.</li></ul></div>
       <h2>Units</h2><div class="grid">${UNITS.map(u => `<a class="ucard" href="#/unit/${u.n}"><div class="thumb"><div class="fallback">${icon(u.icon)}</div><img src="${commons(u.img.file).replace("width=1200", "width=500")}" alt="" loading="lazy" onerror="this.remove()"></div><div class="body"><small>Unit ${u.n}</small><strong>${esc(u.title)}</strong><div class="mini"><span style="width:${unitPct(u)}%"></span></div></div></a>`).join("")}</div>
       <h2>Why this workbook works</h2>
@@ -407,7 +407,7 @@
   function renderAudio() {
     markActive("audio");
     app.innerHTML = hero({ img: AUDIO_IMG, icon: "mic" }, "Student's Book · 24 tracks", "Student's Book audio", "Every track in the Student's Book, unit by unit: a lecture, seminar or meeting (X.1) and a <em>Research Voices</em> monologue (X.2).") +
-      `<div class="callout">The audio files will be added soon. Each track below already has its place; until the files are available, use the recordings played in class.</div>`;
+      `<div class="callout">Listen to each track when the Student's Book tells you to. The voices were generated with AI (Kokoro TTS, open-source software) from the scripts in the Teacher's Guide, using a voice close to each speaker's accent. Some accents are approximate.</div>`;
     let u = 0;
     BOOK_TRACKS.forEach(tr => {
       const n = +tr.id.split(".")[0];

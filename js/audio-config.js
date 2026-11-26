@@ -1,13 +1,12 @@
 /*
-  AUDIO SLOTS (to be completed later)
+  AUDIO TRACKS
   ---------------------------------------------------------------
-  Every Student's Book track has a slot on the site. Until an audio
-  file is added, students see the message "Audio coming soon".
+  All 24 Student's Book tracks are already in the /audio folder
+  (AI-generated voices, see audio/README.md). To replace a track
+  with a real recording:
 
-  There are two ways to add a track:
-
-  1) Upload the file to the /audio folder of the repository with the
-     name shown below (for example audio/track-1-1.mp3).
+  1) Upload the new file to the /audio folder of the repository with
+     the same name shown below (for example audio/track-1-1.mp3).
      Nothing else needs to change.
 
   2) Paste an external link here (a direct mp3 link or a Google Drive
