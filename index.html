@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Pathways B2 · Interactive Workbook · UAZ Graduate Programmes</title>
+<meta name="description" content="Independent practice for the Research Pathways B2 Workbook, with instant feedback, organised by units.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Open the unit menu">☰</button>
+  <a class="brand" href="#/home">
+    <span class="brand-mark" aria-hidden="true">RP</span>
+    <span><strong>Research Pathways B2</strong><small>Interactive Workbook · UAZ Graduate Programmes</small></span>
+  </a>
+</header>
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Units"></nav>
+  <main id="app" tabindex="-1"></main>
+</div>
+<script src="js/audio-config.js"></script>
+<script src="js/data-units-1-6.js"></script>
+<script src="js/data-units-7-12.js"></script>
+<script src="js/app.js"></script>
+<!-- GoatCounter: total visits and visits per unit -->
+<script data-goatcounter="https://serranodesantiago.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' async src="//gc.zgo.at/count.js"></script>
+<script>
+(function () {
+  var last = "";
+  function page() { return location.pathname + ((location.hash || "#/home").replace(/\/(s\d+|diary)$/, "")); }
+  function count(tries) {
+    var p = page();
+    if (p === last) return;
+    if (window.goatcounter && window.goatcounter.count) { last = p; window.goatcounter.count({ path: p, title: document.title }); }
+    else if ((tries || 0) < 50) setTimeout(function () { count((tries || 0) + 1); }, 200);
+  }
+  window.addEventListener("load", function () { count(0); });
+  window.addEventListener("hashchange", function () { count(0); });
+})();
+</script>
+</body>
+</html>
