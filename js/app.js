@@ -304,7 +304,7 @@
   const AUDIO_IMG = { file: "Radio studio. Smaller room. Looking into controll (sic) room LOC matpc.03327.jpg", credit: "Matson Photo Service / Library of Congress, public domain", alt: "A radio studio looking into the control room, 1930s" };
   function renderHome() {
     markActive("home");
-    const homeImg = { img: { file: "Ida Rhodes at NBS 002.jpg", credit: "NIST Historic Photograph Collection, public domain", alt: "Mathematician Ida Rhodes at the National Bureau of Standards", pos: "center 20%" }, icon: "flask" };
+    const homeImg = { img: { file: "Ida Rhodes at NBS 002.jpg", credit: "NIST Historic Photograph Collection, public domain", alt: "Mathematician Ida Rhodes at the National Bureau of Standards", pos: "center 3%" }, icon: "flask" };
     app.innerHTML = hero(homeImg, "UAZ Graduate Programmes · B2 English for research", "Research Pathways B2 — Workbook", "Independent practice for the Student's Book, from project to publication, organised by units and with instant feedback.") +
       `<div class="callout"><strong>How does it work?</strong><ul>
         <li>Do each unit <strong>after</strong> you finish the same unit in class (about 5 hours per unit, including extensive reading and work on your own article).</li>
